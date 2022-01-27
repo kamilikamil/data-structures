@@ -7,6 +7,10 @@ export class Single {
         this._list = list;
     }
 
+    get(): LinkedinList{
+        return this._list;
+    }
+
     insert(value: Number){
         const linkedinList = new LinkedinList({
             value,
