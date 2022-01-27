@@ -41,7 +41,7 @@ export class SinglyLinkedList {
         let temp = this._list;
         let found = false;
 
-        while(temp.next !== null && !found){
+        while(temp !== null && !found){
             if(temp.value === value){
                 found = true;
             }
@@ -60,7 +60,7 @@ export class SinglyLinkedList {
         let temp = this._list;
         let prev = temp;
 
-        while(temp.next !== null){
+        while(temp !== null){
             if(value === temp.value){ // we found the item to remove
                 prev.next = temp.next;
                 this._mutateList(prev);
