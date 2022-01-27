@@ -67,7 +67,7 @@ export class SinglyLinkedList {
                 break;
             }
 
-            prev = temp; // prev is always one item behind than temp, so that we can point to the next item of the found item
+            prev = temp; // prev is always one item behind temp, so that we can point to the next item of the found item
             temp = temp.next;
             
         }
