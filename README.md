@@ -3,13 +3,14 @@
 Just having fun while re-learning data structures.
 
 ### Typescript
+
 - [ ] Linked List (in-progress)
-- [ ] Stacks
+- [ ] Stacks (in-progress)
 - [ ] Queues
 - [ ] Binary Search Tree
 
-
 ### Golang
+
 - [ ] Linked List
 - [ ] Stacks
 - [ ] Queues
