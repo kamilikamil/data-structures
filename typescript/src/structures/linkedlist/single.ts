@@ -1,22 +1,6 @@
-interface ILinkedinList{
-    value: Number,
-    next: LinkedinList | null,
-    prev: LinkedinList | null
-}
+import { LinkedinList } from "./types";
 
-class LinkedinList{
-    value: Number | null = null;
-    next: LinkedinList | null = null;
-
-    constructor(initValues: ILinkedinList){
-        const {value, next} = initValues;
-
-        this.value = value || null;
-        this.next = next || null;
-    }
-}
-
-export class SinglyLinkedList {
+export class Single {
     private _list: LinkedinList | null = null; // lets make sure we don't mutate this variable directly
 
     private _mutateList(list: LinkedinList | null){
