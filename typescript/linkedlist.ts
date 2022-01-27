@@ -23,7 +23,7 @@ export class SinglyLinkedList {
         this._list = list;
     }
 
-    push(value: Number){
+    insert(value: Number){
         const linkedinList = new LinkedinList({
             value,
             next: this._list === null ? null : this._list,

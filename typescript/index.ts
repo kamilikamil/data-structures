@@ -2,10 +2,10 @@ import { SinglyLinkedList } from "./linkedlist";
 
 const list = new SinglyLinkedList();
 
-list.push(5);
-list.push(10);
-list.push(20);
-list.push(30);
+list.insert(5);
+list.insert(10);
+list.insert(20);
+list.insert(30);
 
 console.dir(list, {depth: Infinity});
 
