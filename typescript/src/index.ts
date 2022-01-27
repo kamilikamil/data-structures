@@ -31,6 +31,6 @@ list.insert(30);
 
 console.dir(list, { depth: Infinity });
 
-// list.remove(5);
+list.remove(20);
 
-// console.dir(list, {depth: Infinity});
+console.dir(list, { depth: Infinity });

@@ -59,19 +59,19 @@ export class SinglyLinkedList {
       return;
     }
 
-    let temp: LinkedinList | null = this._list;
-    let prev: LinkedinList | null = temp;
+    let tail: LinkedinList | null = this._list;
+    let prev: LinkedinList | null = tail;
 
-    while (temp !== null) {
-      if (value === temp.value) {
-        // we found the item to remove
-        prev = temp.next;
-        this._mutateList(prev);
+    while (tail !== null) {
+      // we found the item to remove
+      if (value === tail.value) {
+        let temp = tail.next;
+        prev.next = temp;
         break;
       }
 
-      prev = temp; // prev is always one item behind temp, so that we can point to the next item of the found item
-      temp = temp.next;
+      prev = tail; // prev is always one item behind tail, so that we can point to the next item of the found item
+      tail = tail.next;
     }
   }
 }
