@@ -1,19 +1,19 @@
-interface ILinkedinList{
-    value: Number,
-    next: LinkedinList | null,
-    prev: LinkedinList | null
+interface ILinkedinList<T> {
+  value: T;
+  next: LinkedinList<T>;
+  prev: LinkedinList<T>;
 }
 
-export class LinkedinList{
-    value: Number | null = null;
-    next: LinkedinList | null = null;
-    prev: LinkedinList | null = null;
+export class LinkedinList<T> {
+  value: T = null;
+  next: LinkedinList<T> = null;
+  prev: LinkedinList<T> = null;
 
-    constructor(initValues: ILinkedinList){
-        const {value, next, prev} = initValues;
+  constructor(initValues: ILinkedinList<T>) {
+    const { value, next, prev } = initValues;
 
-        this.value = value || null;
-        this.next = next || null;
-        this.prev = prev || null;
-    }
+    this.value = value || null;
+    this.next = next || null;
+    this.prev = prev || null;
+  }
 }
