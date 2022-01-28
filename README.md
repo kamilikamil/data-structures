@@ -6,7 +6,7 @@ Just having fun while re-learning data structures.
 
 - [ ] Linked List (in-progress)
 - [ ] Stacks (in-progress)
-- [ ] Queues
+- [ ] Queues (in-progress)
 - [ ] Binary Search Tree
 
 ### Golang
