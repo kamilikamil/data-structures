@@ -1,13 +1,13 @@
 import { LinkedinList } from "./types";
 
 export class SinglyLinkedList<T> {
-  private _list: LinkedinList<T> = null; // lets make sure we don't mutate this variable directly
+  private _list: LinkedinList<T> | null = null; // lets make sure we don't mutate this variable directly
 
-  private _mutateList(list: LinkedinList<T>) {
+  private _mutateList(list: LinkedinList<T> | null) {
     this._list = list;
   }
 
-  get(): LinkedinList<T> {
+  get(): LinkedinList<T> | null {
     return this._list;
   }
 
@@ -39,7 +39,7 @@ export class SinglyLinkedList<T> {
       return false;
     }
 
-    let temp: LinkedinList<T> = this._list;
+    let temp: LinkedinList<T> | null = this._list;
     let found = false;
 
     while (temp !== null && !found) {
@@ -63,8 +63,8 @@ export class SinglyLinkedList<T> {
       this._mutateList(this._list.next); // we have to remove the head, so mutating the list to be the next item instead
     }
 
-    let tail: LinkedinList<T> = this._list; //this is a shallow copy (any changes being made to tail will be reflected in _list) :)
-    let prev: LinkedinList<T> = this._list; //this is a shallow copy (any changes being made to prev will be reflected in _list) :)
+    let tail: LinkedinList<T> | null = this._list; //this is a shallow copy (any changes being made to tail will be reflected in _list) :)
+    let prev: LinkedinList<T> | null = this._list; //this is a shallow copy (any changes being made to prev will be reflected in _list) :)
 
     while (tail !== null) {
       // we found the item to remove

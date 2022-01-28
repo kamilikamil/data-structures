@@ -5,7 +5,7 @@ import { SinglyLinkedList } from "../linkedlist/single";
 
 export class Queue<T> {
   private _queue: SinglyLinkedList<T> = new SinglyLinkedList();
-  private _headValue: T = null;
+  private _headValue: T | null = null;
 
   push(value: T) {
     if (this._queue.get() === null) {
@@ -31,7 +31,7 @@ export class Queue<T> {
     this._headValue = null;
   }
 
-  peek(): T {
+  peek(): T | null {
     return this._headValue;
   }
 }

@@ -28,7 +28,7 @@ export class Stack<T> {
     this._lastValueAt--;
   }
 
-  peek(): T {
+  peek(): T | null {
     if (this._list.length === 0) {
       return null;
     }

@@ -1,13 +1,13 @@
 interface ILinkedinList<T> {
-  value: T;
-  next: LinkedinList<T>;
-  prev: LinkedinList<T>;
+  value: T | null;
+  next: LinkedinList<T> | null;
+  prev: LinkedinList<T> | null;
 }
 
 export class LinkedinList<T> {
-  value: T = null;
-  next: LinkedinList<T> = null;
-  prev: LinkedinList<T> = null;
+  value: T | null = null;
+  next: LinkedinList<T> | null = null;
+  prev: LinkedinList<T> | null = null;
 
   constructor(initValues: ILinkedinList<T>) {
     const { value, next, prev } = initValues;
