@@ -60,7 +60,7 @@ export class SinglyLinkedList<T> {
     }
 
     if (value === this._list.value) {
-      this._mutateList(this._list.next);
+      this._mutateList(this._list.next); // we have to remove the head, so mutating the list to be the next item instead
     }
 
     let tail: LinkedinList<T> = this._list; //this is a shallow copy (any changes being made to tail will be reflected in _list) :)
